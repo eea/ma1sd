@@ -29,10 +29,7 @@ import java.util.Optional;
 public abstract class ApplicationServiceHandler extends BasicHttpHandler {
 
     protected String getToken(HttpServerExchange ex) {
-        return Optional.ofNullable(ex.getQueryParameters()
-                .getOrDefault("access_token", new LinkedList<>())
-                .peekFirst()
-        ).orElse("");
+        return getAccessToken(ex);
     }
 
 }
