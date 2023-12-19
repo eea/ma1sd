@@ -53,7 +53,7 @@ public class MatrixPath {
     }
 
     public static MatrixPath clientR0() {
-        return client().add("r0");
+        return client().add("v3");
     }
 
     private StringBuilder path = new StringBuilder();
